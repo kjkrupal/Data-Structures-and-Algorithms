@@ -19,6 +19,17 @@ public class Implementation {
         listb.addFromBehind(dharmil);
         listb.addFromBehind(priyank);
 
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.addFromBehind(bhavesh);
+        list.addFromBehind(dharmil);
+        list.addFromBehind(priyank);
+        list.addFromBehind(deepesh);
+
+        list.addBefore(priyank, krupal);
+
+        list.traverseFromFront();
+
+
     }
 
 }

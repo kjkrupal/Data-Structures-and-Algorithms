@@ -38,6 +38,47 @@ public class DoublyLinkedList {
         size ++;
     }
 
+    public void addBefore(Student existing, Student current){
+
+        Node temp = head;
+        boolean found = false;
+
+        while(temp != null){
+            if(temp.getStudent_data() == existing){
+                found = true;
+                Node node = new Node(current, null, null);
+                Node prev = temp.getPrevious();
+                node.setPrevious(prev);
+                node.setNext(temp);
+                prev.setNext(node);
+                temp.setPrevious(node);
+                break;
+            }
+            temp = temp.getNext();
+        }
+
+        if(found == false){
+            System.out.println("Not found in list, adding from front");
+            addToFront(current);
+        }
+
+    }
+
+    public boolean contains(Student student){
+
+        Node temp = head;
+
+        while(temp != null){
+            if(temp.getStudent_data() == student){
+                return true;
+            }
+            temp = temp.getNext();
+        }
+
+        return false;
+
+    }
+
     public void deleteFromFront(){
         if(head == null){
             System.out.println("List is empty");
