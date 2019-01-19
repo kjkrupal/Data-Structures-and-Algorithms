@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Data-Structures-and-Algorithms.iml" filepath="$PROJECT_DIR$/Data-Structures-and-Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/DoublyLinkedList/DoublyLinkedList.iml" filepath="$PROJECT_DIR$/DoublyLinkedList/DoublyLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickSort/QuickSort.iml" filepath="$PROJECT_DIR$/QuickSort/QuickSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/SinglyLinkedList/SinglyLinkedList.iml" filepath="$PROJECT_DIR$/SinglyLinkedList/SinglyLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack Implementation with Array/Stack Implementation with Array.iml" filepath="$PROJECT_DIR$/Stack Implementation with Array/Stack Implementation with Array.iml" />
     </modules>
   </component>
 </project>
