@@ -16,6 +16,5 @@ public class Implementation {
 
         System.out.println(table.get("krupal"));
 
-
     }
 }
