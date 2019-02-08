@@ -3,11 +3,18 @@ import java.util.ArrayList;
 public class Test {
 
     public static void main(String[] args) {
-        ArrayList list = new ArrayList();
-
-        list.add(1);
-        list.add(2);
-
-        System.out.println(list);
+        MyThread thread = new MyThread();
+        thread.start();
     }
+}
+
+class MyThread extends Thread{
+
+    public void run(){
+        for(int i = 0; i < 10; i++){
+            System.out.println("Child thread");
+        }
+    }
+
+    //hya class madhe start ahe but it is invisible
 }
