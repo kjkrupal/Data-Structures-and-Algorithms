@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/QuickSort/QuickSort.iml" filepath="$PROJECT_DIR$/QuickSort/QuickSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/SinglyLinkedList/SinglyLinkedList.iml" filepath="$PROJECT_DIR$/SinglyLinkedList/SinglyLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack Implementation with Array/Stack Implementation with Array.iml" filepath="$PROJECT_DIR$/Stack Implementation with Array/Stack Implementation with Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack Implementation with Linked List/Stack Implementation with Linked List.iml" filepath="$PROJECT_DIR$/Stack Implementation with Linked List/Stack Implementation with Linked List.iml" />
     </modules>
   </component>
 </project>
