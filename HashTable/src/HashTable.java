@@ -3,6 +3,7 @@ import java.util.LinkedList;
 public class HashTable {
 
     LinkedList[] data;
+    int size;
 
     public HashTable(int size){
         data = new LinkedList[size];
