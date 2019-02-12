@@ -8,23 +8,23 @@ public class Implementation {
             heap.add(arr[i]);
         }
 
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
         System.out.println(heap.extractMax());
-        System.out.println(heap.getHeap());
+        System.out.println(heap.getHeap() + "\n");
 
     }
 }

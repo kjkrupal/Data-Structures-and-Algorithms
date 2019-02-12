@@ -44,11 +44,11 @@ public class MaxHeap {
     }
 
     private int leftChild(int i){
-        return 2 * i + 1;
+        return (2 * i) + 1;
     }
 
     private int rightChild(int i){
-        return 2 * i + 2;
+        return (2 * i) + 2;
     }
 
     private void swap(int i, int j){
@@ -58,7 +58,7 @@ public class MaxHeap {
     }
 
     public void add(int element) {
-        if(size == maxSize - 1){
+        if(size == maxSize){
             heap = Arrays.copyOf(heap, heap.length * 2);
             this.maxSize *= 2;
         }
@@ -69,7 +69,6 @@ public class MaxHeap {
 
 
     public String getHeap(){
-        System.out.println(size);
         return Arrays.toString(Arrays.copyOfRange(heap, 0, size));
     }
 
@@ -78,9 +77,9 @@ public class MaxHeap {
             throw new EmptyHeapException();
         }
         int max = heap[0];
-        swap(0, size - 1);
-        shiftDown(0);
+        heap[0] = heap[size - 1];
         size--;
+        shiftDown(0);
         return max;
     }
 
