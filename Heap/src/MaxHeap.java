@@ -3,8 +3,8 @@ import java.util.Arrays;
 public class MaxHeap {
 
     private int[] heap;
-    int size;
-    int maxSize;
+    private int size;
+    private int maxSize;
 
     public MaxHeap(){
         heap = new int[10];
@@ -13,6 +13,7 @@ public class MaxHeap {
 
     public MaxHeap(int initialCapacity){
         heap = new int[initialCapacity];
+        this.maxSize = initialCapacity;
     }
 
     private void shiftUp(int i){
@@ -59,6 +60,7 @@ public class MaxHeap {
     public void add(int element) {
         if(size == maxSize - 1){
             heap = Arrays.copyOf(heap, heap.length * 2);
+            this.maxSize *= 2;
         }
         heap[size] = element;
         shiftUp(size);
@@ -66,8 +68,20 @@ public class MaxHeap {
     }
 
 
-    public int[] get(){
-        return heap;
+    public String getHeap(){
+        System.out.println(size);
+        return Arrays.toString(Arrays.copyOfRange(heap, 0, size));
+    }
+
+    public int extractMax() throws EmptyHeapException{
+        if(size == 0){
+            throw new EmptyHeapException();
+        }
+        int max = heap[0];
+        swap(0, size - 1);
+        shiftDown(0);
+        size--;
+        return max;
     }
 
 }
