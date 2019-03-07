@@ -43,6 +43,11 @@ public class Main {
         String password = scanner.next();
         User user = new User(username, password);
         System.out.println("User authorized? " + userAuthPredicate.test(user));
+
+        // Predicate isEqual() demo
+        Predicate <String> predicate = Predicate.isEqual("krupal");
+        System.out.println(predicate.test("krupal"));
+        System.out.println(predicate.test("jadhav"));
     }
 
 }
