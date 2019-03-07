@@ -1,9 +1,6 @@
 package Predicate;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 
 public class Main {
@@ -38,6 +35,14 @@ public class Main {
         System.out.println("Proper strings are: " + nameList);
 
         // Predicate for user authentication
+        Predicate <User> userAuthPredicate = user -> user.username.equals("krupal") && user.password.equals("kjpwd");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter username: ");
+        String username = scanner.next();
+        System.out.print("Enter password: ");
+        String password = scanner.next();
+        User user = new User(username, password);
+        System.out.println("User authorized? " + userAuthPredicate.test(user));
     }
 
 }
