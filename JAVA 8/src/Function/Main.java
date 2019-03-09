@@ -30,5 +30,12 @@ public class Main {
         System.out.println(getGradeFunction.apply(91));
         System.out.println(getGradeFunction.apply((26)));
         System.out.println(getGradeFunction.apply(69));
+
+        Function <String, String> upperFunction = s -> s.toUpperCase();
+        Function <String, String> firstNineFunction = s -> s.substring(0, 6);
+
+        System.out.println(upperFunction.andThen(firstNineFunction).apply("krupaljadhav"));
+        System.out.println(upperFunction.compose(firstNineFunction).apply("krupaljadhav"));
+
     }
 }
