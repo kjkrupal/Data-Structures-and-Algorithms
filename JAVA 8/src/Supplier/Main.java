@@ -13,12 +13,14 @@ public class Main {
         // Supplier to get random name from array
         Supplier <String> getName = () -> {
             String [] names = {"Krupal", "Tanvi", "Ritika", "Radhika", "Bhavesh"};
-            int i = (int) Math.random() * names.length;
+            int i = (int) Math.floor(Math.random() * names.length);
             return names[i];
         };
 
         System.out.println(getName.get());
 
-
+        // Supplier to generate OTP of length 6
+        Supplier <Integer> getOTP = () -> (int) Math.floor(Math.random() * 1000000);
+        System.out.println(getOTP.get());
     }
 }
