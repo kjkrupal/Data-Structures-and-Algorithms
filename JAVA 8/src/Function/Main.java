@@ -34,6 +34,8 @@ public class Main {
         Function <String, String> upperFunction = s -> s.toUpperCase();
         Function <String, String> firstNineFunction = s -> s.substring(0, 6);
 
+        Function <Integer[], Integer>  sum = a -> a[0] + a[1];
+
         System.out.println(upperFunction.andThen(firstNineFunction).apply("krupaljadhav"));
         System.out.println(upperFunction.compose(firstNineFunction).apply("krupaljadhav"));
 
