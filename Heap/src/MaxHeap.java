@@ -6,51 +6,49 @@ public class MaxHeap {
     private int size;
     private int maxSize;
 
-
-
-    public MaxHeap(){
+    public MaxHeap() {
         heap = new int[10];
         this.maxSize = 10;
     }
 
-    public MaxHeap(int initialCapacity){
+    public MaxHeap(int initialCapacity) {
         heap = new int[initialCapacity];
         this.maxSize = initialCapacity;
     }
 
-    public MaxHeap(int[] arr){
+    public MaxHeap(int[] arr) {
         heap = arr;
         this.size = heap.length;
         this.maxSize = heap.length;
         buildHeap();
     }
 
-    private void shiftUp(int i){
-        while(heap[parent(i)] < heap[i] && i > 0){
+    void shiftUp(int i) {
+        while(heap[parent(i)] < heap[i] && i > 0) {
             swap(parent(i), i);
             i = parent(i);
         }
     }
 
-    private void buildHeap(){
+    private void buildHeap() {
         for(int i = (size/2) - 1; i >= 0; i --){
-            shiftDown(i);
+            shiftDown(size, i);
         }
     }
 
-    private void shiftDown(int i){
+    private void shiftDown(int size, int i){
         int maxIndex = i;
         int l = leftChild(i);
-        if(l < size && heap[l] > heap[maxIndex]){
+        if(l < size && heap[l] > heap[maxIndex]) {
             maxIndex = l;
         }
         int r = rightChild(i);
         if(r < size && heap[r] > heap[maxIndex]){
             maxIndex = r;
         }
-        if(i != maxIndex){
+        if(i != maxIndex) {
             swap(i, maxIndex);
-            shiftDown(maxIndex);
+            shiftDown(size, maxIndex);
         }
     }
 
@@ -94,16 +92,15 @@ public class MaxHeap {
         int max = heap[0];
         heap[0] = heap[size - 1];
         size--;
-        shiftDown(0);
+        shiftDown(size, 0);
         return max;
     }
 
     public int[] sort(){
-        size--;
+
         for (int i = maxSize - 1; i >= 0; i--){
-            swap(0, size);
-            size = size - 1;
-            shiftDown(0);
+            swap(0, i);
+            shiftDown(i, 0);
         }
         return heap;
     }
