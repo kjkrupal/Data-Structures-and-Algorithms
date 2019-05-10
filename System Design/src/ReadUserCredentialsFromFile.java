@@ -23,7 +23,7 @@ class LogFile implements FileType {
 }
 
 enum FileExtension {
-    PROPERTY(".properties"), LOG(".log");
+    PROPERTY("properties"), LOG("log");
 
     private String extension;
 
@@ -70,13 +70,30 @@ class UserCredentials {
 
     public static void main(String[] args) {
 
+        // Main Code to read user credentials
+
+        String fileA = "system.log";
+        String fileB = "app.properties";
+        String fileC = "file.txt";
+
+        UserCredentials userCredentials = new UserCredentials();
+
+        userCredentials.extractExtension(fileA);
+        userCredentials.extractExtension(fileB);
+
+
     }
 
-    public static void extractExtension(String filename) {
+    public void extractExtension(String filename) {
+
+        String[] split = filename.split("");
+
+        FileType fileType = getFileType(split[1]);
+
 
     }
 
-    public FileType getFileType() {
+    public FileType getFileType(String extension) {
         return null;
     }
 

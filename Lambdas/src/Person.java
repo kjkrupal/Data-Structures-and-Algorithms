@@ -3,11 +3,13 @@ public class Person {
     String firstName;
     String lastName;
     int id;
+    Address address;
 
-    public Person(String firstName, String lastName, int id) {
+    public Person(String firstName, String lastName, int id, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
+        this.address = address;
     }
 
     public String getFirstName() {
@@ -32,6 +34,14 @@ public class Person {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override

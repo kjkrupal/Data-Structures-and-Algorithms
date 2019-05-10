@@ -2,25 +2,39 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-class Solution implements Cloneable {
-    int x;
-    int y;
-    Anagram anagram;
+@FunctionalInterface
+interface A {
 
-    public static void main(String[] args) throws Exception {
+    default void m1() {
+        System.out.println("M1 Default");
+    }
 
-        Solution solution = new Solution();
-        solution.x = 1;
-        solution.y = 2;
-        solution.anagram = new Anagram();
+    static void m2() {
+        System.out.println("M2 Static");
+    }
 
-        Solution solution2 = (Solution) solution.clone();
+    void m3(int x);
+}
 
-        System.out.println(solution.anagram + " " + solution2.anagram);
+class Solution  {
+
+    public static void main(String[] args) {
+
+        A a = Solution::method;
+
+        A b = x -> System.out.println("BHADWE " + x);
+
+        a.m3(7);
+        b.m3(10);
 
     }
 
-    public Anagram getAnagram() {
-        return anagram;
+    public void m1(int x) {
+        System.out.println("Solution M1");
     }
+
+    public static void method(int x) {
+        System.out.println("LAUDE " + x);
+    }
+
 }
